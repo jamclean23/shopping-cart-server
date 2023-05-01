@@ -1,6 +1,8 @@
 const express = require('express');
 const server = express();
 const cors = require('cors');
+const getPrintifyObject = require('./modules/get-printify-object/get-printify-object.js');
+
 const authkey = '12345';
 
 const PORT = 49000;
@@ -13,12 +15,19 @@ server.listen(PORT, () => {
     console.log('Server listening on port ' + PORT);
 });
 
-server.get('/', (req, res) => {
-    console.log(req.header('Authorization').split('Bearer ')[1]);
+server.get('/', async (req, res) => {
+
+    console.log('Request received with authorization: ' + req.header('Authorization').split('Bearer ')[1]);
     if (req.header('Authorization').split('Bearer ')[1] === authkey) {
-        res.send({"body":"Test Response " + counter});
+
+        console.log ('Request authorized');
+
+        let printifyObject = await getPrintifyObject();
+        console.log('Sending Printify Object');
+        res.send(printifyObject);
         counter++;
     } else {
+        console.log('Unauthorized request');;
         res.send({"body":"Unauthorized"});
     }
-})
+});
