@@ -3,7 +3,7 @@ const server = express();
 const cors = require('cors');
 const getPrintifyObject = require('./modules/get-printify-object/get-printify-object.js');
 
-const authkey = '12345';
+const { authkey } = require('./accesskey.js');
 
 const PORT = 49000;
 
