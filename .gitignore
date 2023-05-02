@@ -1,3 +1,6 @@
 printify-key.js
 node_modules/
 accesskey.js
+httpskey.pem
+httpscsr.pem
+httpscert.pem

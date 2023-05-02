@@ -2,6 +2,9 @@ const express = require('express');
 const server = express();
 const cors = require('cors');
 const getPrintifyObject = require('./modules/get-printify-object/get-printify-object.js');
+const https = require('https');
+const fs = require('fs');
+
 
 const { authkey } = require('./accesskey.js');
 
