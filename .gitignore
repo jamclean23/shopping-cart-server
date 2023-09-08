@@ -2,3 +2,4 @@ printify-key.js
 node_modules/
 accesskey.js
 certificate/
+hostEmail.js

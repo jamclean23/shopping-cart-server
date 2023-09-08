@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { printifyKey } = require('../../printify-key.js');
+const { printifyKey } = require('../../static/printify-key.js');
 
 async function getPrintifyProductObj (productId) {
     let response = await axios('https://api.printify.com/v1/shops/8878313/products/' + productId + '.json', {
