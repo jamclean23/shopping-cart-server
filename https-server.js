@@ -45,7 +45,7 @@ function startHttpsServer () {
         console.log('\n****');
         console.log('Send Email request received');
         const trustedOrigins = [
-            'http://8.40.62.125:60000',
+            'http://38.132.159.28:5555',
             'https://jamclean23.github.io'
         ];
 
@@ -73,7 +73,7 @@ function startHttpsServer () {
                 res.send({"body": "failed"});
             }
         } else {
-            console.log('\nRejected\n');
+            console.log('\nRejected, untrusted origin\n');
             res.send({"body": "Untrusted origin"});
         }
         console.log('****\n');

@@ -34,7 +34,7 @@ function generateEmail (name, message, senderEmail, mode = 'confirmation') {
             <head>
                 <meta charset="UTF-8">
             </head>
-            <body style="background: url(${mountainImg}) right / contain no-repeat;background-color: #1F1F2D; padding: 1rem 4rem;">
+            <body style="background: url(${mountainImg}) right / 25% auto no-repeat;background-color: #1F1F2D; padding: 1rem 4rem;">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td align="center">
